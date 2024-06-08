@@ -38,8 +38,9 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="435dp"
         android:layout_marginHorizontal="10dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="15dp"
@@ -131,7 +132,7 @@
                 android:id="@+id/textView21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/abhaya_libre"
                 android:text="Total Fee: x €"
                 android:textAlignment="center"
@@ -140,6 +141,7 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
 
 
     <Toolbar
@@ -176,5 +178,16 @@
             app:srcCompat="@drawable/history" />
 
     </Toolbar>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="123dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="17dp"
+        android:text="PAY"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
