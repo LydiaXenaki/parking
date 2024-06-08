@@ -66,18 +66,18 @@
                 android:textSize="50dp" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/start_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:text="Starting Date: xx/x/xxxx"
+                android:text="Starting Date: "
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30dp" />
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/end_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/abhaya_libre"
@@ -87,7 +87,7 @@
                 android:textSize="30dp" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/start_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -98,7 +98,7 @@
                 android:textSize="30dp" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/end_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/abhaya_libre"
