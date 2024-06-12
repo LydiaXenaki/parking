@@ -58,7 +58,7 @@
                 android:id="@+id/TicketTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/keania_one"
                 android:text="Ticket"
                 android:textAlignment="center"
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:text="Starting Date: "
+                android:text=""
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30dp" />
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/abhaya_libre"
-                android:text="End Date:"
+                android:text=""
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30dp" />
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/abhaya_libre"
-                android:text="Starting Time: xx:xx"
+                android:text=""
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30dp" />
@@ -102,7 +102,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/abhaya_libre"
-                android:text="End Time: xx:xx"
+                android:text=""
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30dp" />
@@ -118,21 +118,12 @@
                 android:textColor="#6A9BFC"
                 android:textSize="44dp" />
 
-            <TextView
-                android:id="@+id/spot"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/abhaya_libre"
-                android:text="Spot: x"
-                android:textAlignment="center"
-                android:textColor="#6A9BFC"
-                android:textSize="44dp" />
 
             <TextView
                 android:id="@+id/totalFee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="25dp"
                 android:fontFamily="@font/abhaya_libre"
                 android:text="Total Fee: x €"
                 android:textAlignment="center"

@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -18,10 +19,12 @@ import java.util.Locale;
 
 public class MainActivityTicket extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_ticket);
+        Variables app = (Variables) getApplicationContext();
 
         TextView starting_date = findViewById(start_date);
         TextView ending_date = findViewById(end_date);
@@ -35,12 +38,14 @@ public class MainActivityTicket extends AppCompatActivity {
         SimpleDateFormat time = new SimpleDateFormat("HH:mm:ss ", Locale.getDefault());
         String formattedTimeStart = time.format(new Date());
 
+        SimpleDateFormat parkedTime = app.getJustParkedTimeDate();
+
         // Display the formatted date and time
         starting_date.setText("Starting Date: " + formattedDate);
         ending_date.setText("End Date: " + formattedDate);
 
-        starting_time.setText("Starting Date: " + formattedTimeStart);
-        ending_time.setText("End Date: " + formattedTimeStart);
+        starting_time.setText("Starting Time: " + parkedTime);
+        ending_time.setText("End Time: " + formattedTimeStart);
 
 
 
@@ -54,3 +59,4 @@ public class MainActivityTicket extends AppCompatActivity {
         startActivity(new Intent(this,MainActivity.class));
     }
 }
+

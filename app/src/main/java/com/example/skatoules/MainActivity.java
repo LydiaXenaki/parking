@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
        Variables app = (Variables) getApplicationContext();
         setContentView(R.layout.activity_main);
-        app.setSomeGlobalData("Hello from MainActivity");
-        String data = app.getSomeGlobalData();
+//        app.setSomeGlobalData("Hello from MainActivity");
+//        String data = app.getSomeGlobalData();
         TextView textView = findViewById(R.id.MainPageName);
-        textView.setText(data);
+//        textView.setText(data);
     }
 
     public void openHistoryActivity(View view) {
