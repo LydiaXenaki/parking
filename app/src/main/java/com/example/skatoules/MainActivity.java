@@ -3,6 +3,7 @@ package com.example.skatoules;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,7 +17,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+       Variables app = (Variables) getApplicationContext();
         setContentView(R.layout.activity_main);
+        app.setSomeGlobalData("Hello from MainActivity");
+        String data = app.getSomeGlobalData();
+        TextView textView = findViewById(R.id.MainPageName);
+        textView.setText(data);
     }
 
     public void openHistoryActivity(View view) {
