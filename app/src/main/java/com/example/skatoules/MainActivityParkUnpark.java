@@ -39,4 +39,8 @@ public class MainActivityParkUnpark extends AppCompatActivity {
     public void openMainActivityTicket(View view) {
         startActivity(new Intent(this,MainActivityTicket.class));
     }
+
+    public void openMapActivity(View view) {
+        startActivity(new Intent(this,MapActivity.class));
+    }
 }

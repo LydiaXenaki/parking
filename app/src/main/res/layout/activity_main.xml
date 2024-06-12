@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/MainPageTitle"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:background="#BCBFFF"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/MainPageName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#BCBFFF"
@@ -63,7 +63,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton"
+                        android:id="@+id/imageButtonlalakia"
                         android:layout_width="match_parent"
                         android:layout_height="300dp"
                         android:onClick="openMainActivityParkUnpark"
@@ -75,7 +75,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView3"
+                            android:id="@+id/Lalakia"
                             android:layout_width="189dp"
                             android:layout_height="30dp"
                             android:text="Λαλακιά"
@@ -85,7 +85,7 @@
                             android:paddingLeft="5dp" />
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/LalakiaAmea"
                             android:layout_width="189dp"
                             android:layout_height="30dp"
                             android:text="AMEA accesible: No"
@@ -99,7 +99,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id/LalakiaKm"
                             android:layout_width="189dp"
                             android:layout_height="25dp"
                             android:paddingLeft="10dp"
@@ -107,7 +107,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/textView3"/>
 
                         <TextView
-                            android:id="@+id/textView5"
+                            android:id="@+id/LalakiaSpots"
                             android:layout_width="189dp"
                             android:layout_height="25dp"
                             android:text="80/80 spots"
@@ -134,7 +134,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton"
+                        android:id="@+id/imageButtonNisaki"
                         android:layout_width="match_parent"
                         android:layout_height="300dp"
                         app:srcCompat="@drawable/nisaki"
@@ -146,7 +146,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView3"
+                            android:id="@+id/Nisaki"
                             android:layout_width="189dp"
                             android:layout_height="30dp"
                             android:text="Νισάκι"
@@ -156,7 +156,7 @@
                             android:paddingLeft="5dp" />
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/NisakiAmea"
                             android:layout_width="189dp"
                             android:layout_height="30dp"
                             android:text="AMEA accesible: Yes"
@@ -170,7 +170,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id/NisakiKm"
                             android:layout_width="189dp"
                             android:layout_height="25dp"
                             android:paddingLeft="10dp"
@@ -178,7 +178,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/textView3"/>
 
                         <TextView
-                            android:id="@+id/textView5"
+                            android:id="@+id/NisakiSpots"
                             android:layout_width="189dp"
                             android:layout_height="25dp"
                             android:text="45/100 spots"
@@ -206,7 +206,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton"
+                        android:id="@+id/imageButtonDoxa"
                         android:layout_width="match_parent"
                         android:layout_height="300dp"
                         app:srcCompat="@drawable/doxa"
@@ -218,7 +218,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView3"
+                            android:id="@+id/Doxa"
                             android:layout_width="189dp"
                             android:layout_height="30dp"
                             android:text="Δόξα"
@@ -228,7 +228,7 @@
                             android:paddingLeft="5dp" />
 
                         <TextView
-                            android:id="@+id/textView4"
+                            android:id="@+id/DoxaAmea"
                             android:layout_width="189dp"
                             android:layout_height="30dp"
                             android:text="AMEA accesible: Yes"
@@ -242,7 +242,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/textView6"
+                            android:id="@+id/DoxaKm"
                             android:layout_width="189dp"
                             android:layout_height="25dp"
                             android:paddingLeft="10dp"
@@ -250,7 +250,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/textView3"/>
 
                         <TextView
-                            android:id="@+id/textView5"
+                            android:id="@+id/DoxaSpots"
                             android:layout_width="189dp"
                             android:layout_height="25dp"
                             android:text="25/60 spots"
@@ -261,7 +261,6 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
 
         </LinearLayout>
 
@@ -275,7 +274,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
-            android:id="@+id/imageButton12"
+            android:id="@+id/ParkingAreas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
@@ -283,7 +282,7 @@
             app:srcCompat="@drawable/areas" />
 
         <ImageButton
-            android:id="@+id/imageButton10"
+            android:id="@+id/Location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
@@ -291,7 +290,7 @@
             app:srcCompat="@drawable/location" />
 
         <ImageButton
-            android:id="@+id/imageButton11"
+            android:id="@+id/History"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"

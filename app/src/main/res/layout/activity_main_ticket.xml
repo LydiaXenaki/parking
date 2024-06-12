@@ -8,7 +8,7 @@
     tools:context=".MainActivityTicket">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/TicketPageTitle"
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:background="#BCBFFF"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/TicketPageName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#BCBFFF"
@@ -34,11 +34,11 @@
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/TicketPageTitle" />
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/Ticket"
         android:layout_width="match_parent"
         android:layout_height="435dp"
         android:layout_marginHorizontal="10dp"
@@ -47,7 +47,7 @@
         app:cardBackgroundColor="#85FFFFFF"
         app:cardElevation="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/TicketPageName">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -55,7 +55,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/TicketTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -108,7 +108,7 @@
                 android:textSize="30dp" />
 
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/parking"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -119,7 +119,7 @@
                 android:textSize="44dp" />
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/spot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/abhaya_libre"
@@ -129,7 +129,7 @@
                 android:textSize="44dp" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/totalFee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -142,7 +142,16 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="123dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="17dp"
+        android:text="PAY"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Ticket" />
 
     <Toolbar
         android:id="@+id/toolbar2"
@@ -179,15 +188,5 @@
 
     </Toolbar>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="123dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="17dp"
-        android:text="PAY"
-        android:textSize="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
