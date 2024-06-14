@@ -24,6 +24,7 @@ public class MainActivityParkUnpark extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_park_unpark);
         Variables app = (Variables) getApplicationContext();
+        SimpleDateFormat data = app.getjustParkedTimeDate();
 
         park = findViewById(R.id.btnPark);
         unpark = findViewById(R.id.btnUnpark);
@@ -33,9 +34,23 @@ public class MainActivityParkUnpark extends AppCompatActivity {
             @Override
             public void onClick(View view) {
              SimpleDateFormat nowTime = new SimpleDateFormat("HH:mm:ss ", Locale.getDefault());
+             SimpleDateFormat nowDate = new SimpleDateFormat("yyyy-MM-dd ", Locale.getDefault());
+             Date date = new Date();
+             Date date2 = new Date();
+             String formattedTime = nowTime.format(date);
+             String formattedDate = nowDate.format(date2);
 
-                Toast.makeText(MainActivityParkUnpark.this, "Park Meter starting now",Toast.LENGTH_LONG).show();
-                app.setJustParkedTimeDate(nowTime);
+             app.setCurrentTime(formattedTime);
+             String printTime = app.getCurrentTime();
+
+             app.setCurrentDate(formattedDate);
+             String printDate = app.getCurrentDate();
+
+
+
+             Toast.makeText(MainActivityParkUnpark.this, "Park Meter starting now",Toast.LENGTH_LONG).show();
+
+
 
             }
         });

@@ -4,7 +4,10 @@ import android.app.Application;
 import java.text.SimpleDateFormat;
 
 public class Variables extends Application {
-        private String someGlobalData = "123";
+        private String currentTime;
+
+        private String currentDate;
+
         private SimpleDateFormat justParkedTimeDate;
         private SimpleDateFormat UnparkedTimeDate;
         private int ParkingSpotsLal;
@@ -15,19 +18,28 @@ public class Variables extends Application {
 
 
 
-//        public String getSomeGlobalData() {
-//            return someGlobalData;
-//        }
-//
-//        public void setSomeGlobalData(String someGlobalData) {
-//            this.someGlobalData = someGlobalData;
-//        }
+        public String getCurrentTime() {
+            return currentTime;
+        }
 
-        public SimpleDateFormat getJustParkedTimeDate() {
+        public void setCurrentTime(String currentTime) {
+            this.currentTime = currentTime;
+        }
+
+
+        public String getCurrentDate() {
+        return currentDate;
+    }
+
+        public void setCurrentDate(String currentDate) {
+        this.currentDate = currentDate;
+    }
+
+        public SimpleDateFormat getjustParkedTimeDate() {
             return justParkedTimeDate;
         }
 
-        public void setJustParkedTimeDate(SimpleDateFormat someGlobalData) {
+        public void setjustParkedTimeDate(SimpleDateFormat justParkedTimeDate) {
             this.justParkedTimeDate = justParkedTimeDate;
         }
 
