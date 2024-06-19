@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
     //public void opena14_osmdroidexpanded(View view) {
       //  startActivity(new Intent(this,a14_osmdroidexpanded.class));
    // }

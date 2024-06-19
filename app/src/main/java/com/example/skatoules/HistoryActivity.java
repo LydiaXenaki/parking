@@ -14,6 +14,9 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_history);
     }
 
+    public void openMainActivityParkUnpark(View view) {
+        startActivity(new Intent(this,MainActivityParkUnpark.class));
+    }
     public void openMainActivity(View view) {
         startActivity(new Intent(this,MainActivity.class));
     }
