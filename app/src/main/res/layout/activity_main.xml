@@ -7,12 +7,14 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/ParkingAreaslinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#A7D7FD"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/MainPageTitle"
@@ -44,7 +46,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <ScrollView
-            android:id="@+id/Parkings"
+            android:id="@+id/ParkingsList"
             android:layout_width="match_parent"
             android:layout_height="510dp"
             android:background="#A7D7FD"
@@ -55,18 +57,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-
                 <!--start 1st LalakiaCardview-->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="15dp"
                     app:cardBackgroundColor="#92FFFFFF"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp">
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -132,7 +131,8 @@
                         android:layout_height="match_parent"
                         app:cardBackgroundColor="#92FF0000"
                         app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp"></androidx.cardview.widget.CardView>
+                        app:cardElevation="4dp">
+                    </androidx.cardview.widget.CardView>
 
                 </androidx.cardview.widget.CardView>
                 <!--end 1st cardview-->
@@ -212,7 +212,8 @@
                         android:layout_height="match_parent"
                         app:cardBackgroundColor="#92FF0000"
                         app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp"></androidx.cardview.widget.CardView>
+                        app:cardElevation="4dp">
+                    </androidx.cardview.widget.CardView>
 
                 </androidx.cardview.widget.CardView>
                 <!--end 2nd cardview-->
@@ -294,7 +295,8 @@
                         android:layout_height="match_parent"
                         app:cardBackgroundColor="#92FF0000"
                         app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp"></androidx.cardview.widget.CardView>
+                        app:cardElevation="4dp">
+                    </androidx.cardview.widget.CardView>
 
                 </androidx.cardview.widget.CardView>
                 <!--end 3rd cardview-->
