@@ -10,8 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -32,6 +35,7 @@ public class MainActivityTicket extends AppCompatActivity {
         TextView ending_time = findViewById(end_time);
         TextView parkingName = findViewById(R.id.parking);
         TextView totalFee = findViewById(R.id.totalFee);
+        Button payButton = findViewById(R.id.button2);
 
         // Format the current date and time
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd ", Locale.getDefault());
@@ -64,8 +68,20 @@ public class MainActivityTicket extends AppCompatActivity {
         totalFee.setText("Total Fee: " + s + "$");
 
 
+    payButton.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Log.d("logsex", "onClick: patithika gia add values");
+            Ticket ticket = new Ticket(printDate, formattedDate, printTime, formattedTimeStart, parking_name, s + "$");
+            TicketManager.getInstance().setTicket(ticket);
+
+        };
+
+    });
 
     }
+
+
 
     public void openMapActivity(View view) {
         startActivity(new Intent(this, MapActivity.class));

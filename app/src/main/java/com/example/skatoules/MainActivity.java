@@ -97,6 +97,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        buttonPin.setEnabled(app.isParked());
+
+
         buttonPin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -166,6 +170,8 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(clickParking);
     }
+
+
 
 
 
