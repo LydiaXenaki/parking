@@ -19,9 +19,9 @@ public class Variables extends Application {
 
     private String justParked;
 
-        private int parkingSpotsLal;
+        private int parkingSpotsLal = 4;
         private int parkingSpotsDox;
-        private int parkingSpotsNis;
+        private int parkingSpotsNis = 5;
 
         private int parkingSpotsLalmax = 5;
         private int parkingSpotsDoxmax = 5;
