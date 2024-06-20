@@ -1,15 +1,24 @@
 package com.example.skatoules;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.service.controls.actions.FloatAction;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.example.skatoules.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     String[] parkingList = {"doxa", "lalakia", "nisaki"};
@@ -21,31 +30,100 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Variables app = (Variables) getApplicationContext();
 
+
+
+        CardView lalakiaRedBox = findViewById(R.id.RedBoxLalakia);
+        lalakiaRedBox.setBackgroundColor(Color.parseColor("#00FFFFFF"));
+        CardView nisakiRedBox = findViewById(R.id.RedBoxNisaki);
+        nisakiRedBox.setBackgroundColor(Color.parseColor("#00FFFFFF"));
+        CardView doxaRedBox = findViewById(R.id.RedBoxDoxa);
+        doxaRedBox.setBackgroundColor(Color.parseColor("#00FFFFFF"));
+
+
         TextView textView = findViewById(R.id.MainPageName);
         ImageButton button2 = findViewById(R.id.imageButtonNisaki);
         ImageButton button1 = findViewById(R.id.imageButtonlalakia);
         ImageButton button3 = findViewById(R.id.imageButtonDoxa);
-
+        FloatingActionButton buttonPin = findViewById(R.id.ParkUnpark_button);
+        Log.d("logsex", "einai" + app.getCurrentParking()+ "afto");
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                handleButtonClick(view.getId());
+                if (Objects.equals(app.getCurrentParking(), "Λαλακιά") || app.getCurrentParking() == ""){
+                    handleButtonClick(view.getId());
+                }else{
+                    Toast.makeText(MainActivity.this, "Youre allready parked somewhere",Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                handleButtonClick(view.getId());
+                if (Objects.equals(app.getCurrentParking(), "Νησάκι") || app.getCurrentParking() == ""){
+                    handleButtonClick(view.getId());
+                }else{
+                    Toast.makeText(MainActivity.this, "Youre allready parked somewhere",Toast.LENGTH_LONG).show();
+                }
             }
         });
 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                handleButtonClick(view.getId());
+                if (Objects.equals(app.getCurrentParking(), "Δόξα") || app.getCurrentParking() == ""){
+                    handleButtonClick(view.getId());
+                }else{
+                    Toast.makeText(MainActivity.this, "Youre allready parked somewhere",Toast.LENGTH_LONG).show();
+                }
             }
         });
+
+        buttonPin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("logsex", "patithika ");
+                Intent floatingButtonPress = new Intent(MainActivity.this, MainActivityParkUnpark.class );
+                startActivity(floatingButtonPress);
+
+            }
+        });
+
+
+         int lalakiaMax = app.getParkingSpotsLalmax();
+         int lalakiaNow = app.getParkingSpotsLal();
+         int nisakiMax = app.getParkingSpotsNismax();
+         int nisakiNow = app.getParkingSpotsNis();
+         int doxaMax = app.getParkingSpotsDoxmax();
+         int doxaNow = app.getParkingSpotsDox();
+
+        TextView lalakiaCapacity =findViewById(R.id.LalakiaSpots);
+        TextView nisakiCapacity = findViewById(R.id.NisakiSpots);
+        TextView doxaCapacity = findViewById(R.id.DoxaSpots);
+
+        lalakiaCapacity.setText(lalakiaNow + "/" + lalakiaMax + "spots");
+        nisakiCapacity.setText(nisakiNow + "/" + nisakiMax + "spots");
+        doxaCapacity.setText(doxaNow+ "/" + doxaMax + "spots");
+
+        checkredboxes(lalakiaMax, lalakiaNow, nisakiMax, nisakiNow, doxaMax, doxaNow);
+
+
+    }
+
+    private void checkredboxes(int lalakiaMax, int lalakiaNow, int nisakiMax, int nisakiNow, int doxaMax, int doxaNow) {
+       if (lalakiaNow >= lalakiaMax){
+           CardView lalakiaRedBox = findViewById(R.id.RedBoxLalakia);
+           lalakiaRedBox.setBackgroundColor(Color.parseColor("#92FF0000"));
+       }
+       if (nisakiNow >= nisakiMax){
+           CardView nisakiRedBox = findViewById(R.id.RedBoxNisaki);
+           nisakiRedBox.setBackgroundColor(Color.parseColor("#92FF0000"));
+       }
+       if (doxaNow >= doxaMax){
+           CardView doxaRedBox = findViewById(R.id.RedBoxDoxa);
+           doxaRedBox.setBackgroundColor(Color.parseColor("#92FF0000"));
+       }
     }
 
     public void openHistoryActivity(View view) {
@@ -64,11 +142,20 @@ public class MainActivity extends AppCompatActivity {
         } else {
             // Handle unexpected button press (optional)
         }
+
         startActivity(clickParking);
     }
 
 
+
+
+
+
+
 }
+
+
+
 
 
 //    public void openMainActivityParkUnpark(View view) {

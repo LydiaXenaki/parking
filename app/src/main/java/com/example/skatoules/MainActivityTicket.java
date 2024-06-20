@@ -31,6 +31,7 @@ public class MainActivityTicket extends AppCompatActivity {
         TextView starting_time = findViewById(start_time);
         TextView ending_time = findViewById(end_time);
         TextView parkingName = findViewById(R.id.parking);
+        TextView totalFee = findViewById(R.id.totalFee);
 
         // Format the current date and time
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd ", Locale.getDefault());
@@ -41,11 +42,16 @@ public class MainActivityTicket extends AppCompatActivity {
 
         String printTime = app.getCurrentTime();
         String printDate = app.getCurrentDate();
-        String parking_name = app.getCurrentParking();
+        String parking_name = app.getJustParked();
+        long timemili= System.currentTimeMillis();
+        long pay = timemili - app.getCurrentTimeMili();
+        String s = String.valueOf(pay);
 
 
 
-        
+
+
+
 
         parkingName.setText("Parking: " + parking_name);
         // Display the formatted date and time
@@ -54,6 +60,8 @@ public class MainActivityTicket extends AppCompatActivity {
 
         starting_time.setText("Starting Time: " + printTime);
         ending_time.setText("End Time: " + formattedTimeStart);
+
+        totalFee.setText("Total Fee: " + s + "$");
 
 
 

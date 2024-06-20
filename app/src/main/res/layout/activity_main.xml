@@ -347,7 +347,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="70dp"
-        android:onClick="openMainActivityParkUnpark"
+
         android:outlineSpotShadowColor="@color/black"
         app:backgroundTint="#6685F6"
         app:fabSize="normal"

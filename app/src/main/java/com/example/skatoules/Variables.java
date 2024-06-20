@@ -2,9 +2,22 @@ package com.example.skatoules;
 import android.app.Application;
 
 public class Variables extends Application {
+
+
+
+        private boolean isParked = false;
         private String currentTime;
+
+
+
+        private long currentTimeMili;
+        private int timeMili;
         private String currentDate;
-        private String currentParking;
+        private String currentParking = "";
+
+
+
+    private String justParked;
 
         private int parkingSpotsLal;
         private int parkingSpotsDox;
@@ -17,6 +30,21 @@ public class Variables extends Application {
 
 
 
+        public boolean isParked() {
+            return isParked;
+        }
+
+        public void setParked(boolean parked) {
+            isParked = parked;
+        }
+
+        public String getJustParked() {
+            return justParked;
+        }
+
+        public void setJustParked(String justParked) {
+            this.justParked = justParked;
+        }
 
         public String getCurrentTime() {
             return currentTime;
@@ -26,7 +54,13 @@ public class Variables extends Application {
             this.currentTime = currentTime;
         }
 
+        public long getCurrentTimeMili() {
+            return currentTimeMili;
+        }
 
+        public void setCurrentTimeMili(long currentTimeMili) {
+            this.currentTimeMili = currentTimeMili;
+        }
         public String getCurrentDate() {
         return currentDate;
     }
