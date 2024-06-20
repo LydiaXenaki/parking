@@ -1,18 +1,18 @@
 package com.example.skatoules;
 import android.app.Application;
 
-import java.text.SimpleDateFormat;
-
 public class Variables extends Application {
         private String currentTime;
-
         private String currentDate;
+        private String currentParking;
 
-        private SimpleDateFormat justParkedTimeDate;
-        private SimpleDateFormat UnparkedTimeDate;
-        private int ParkingSpotsLal;
-        private int ParkingSpotsDox;
-        private int ParkingSpotsNis;
+        private int parkingSpotsLal;
+        private int parkingSpotsDox;
+        private int parkingSpotsNis;
+
+        private int parkingSpotsLalmax = 5;
+        private int parkingSpotsDoxmax = 5;
+        private int parkingSpotsNismax = 5;
 
 
 
@@ -35,21 +35,65 @@ public class Variables extends Application {
         this.currentDate = currentDate;
     }
 
-        public SimpleDateFormat getjustParkedTimeDate() {
-            return justParkedTimeDate;
+
+        public int getParkingSpotsLal() {
+            return parkingSpotsLal;
         }
 
-        public void setjustParkedTimeDate(SimpleDateFormat justParkedTimeDate) {
-            this.justParkedTimeDate = justParkedTimeDate;
+        public void setParkingSpotsLal(int parkingSpotsLal) {
+            this.parkingSpotsLal = parkingSpotsLal;
         }
 
-        public SimpleDateFormat getUnparkedTimeDate() {
-            return UnparkedTimeDate;
+        public int getParkingSpotsNis() {
+            return parkingSpotsNis;
         }
 
-        public void setUnparkedTimeDate(SimpleDateFormat UnparkedTimeDate) {
-            this.UnparkedTimeDate = UnparkedTimeDate;
+        public void setParkingSpotsNis(int parkingSpotsNis) {
+            this.parkingSpotsNis = parkingSpotsNis;
         }
+
+        public int getParkingSpotsDox() {
+            return parkingSpotsDox;
+        }
+
+        public void setParkingSpotsDox(int parkingSpotsDox) {
+            this.parkingSpotsDox = parkingSpotsDox;
+
+        }
+
+        public int getParkingSpotsNismax() {
+            return parkingSpotsNismax;
+        }
+
+        public void setParkingSpotsNismax(int parkingSpotsNismax) {
+            this.parkingSpotsNismax = parkingSpotsNismax;
+        }
+
+        public int getParkingSpotsDoxmax() {
+            return parkingSpotsDoxmax;
+        }
+
+        public void setParkingSpotsDoxmax(int parkingSpotsDoxmax) {
+            this.parkingSpotsDoxmax = parkingSpotsDoxmax;
+        }
+
+        public int getParkingSpotsLalmax() {
+            return parkingSpotsLalmax;
+        }
+
+        public void setParkingSpotsLalmax(int parkingSpotsLalmax) {
+            this.parkingSpotsLalmax = parkingSpotsLalmax;
+        }
+
+        public String getCurrentParking() {
+            return currentParking;
+        }
+
+        public void setCurrentParking(String currentParking) {
+            this.currentParking = currentParking;
+        }
+
+
 
 
     }

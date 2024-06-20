@@ -76,7 +76,7 @@
                             android:id="@+id/imageButtonlalakia"
                             android:layout_width="match_parent"
                             android:layout_height="300dp"
-                            android:onClick="openMainActivityParkUnpark"
+
                             app:srcCompat="@drawable/lalakia" />
 
                         <LinearLayout
@@ -157,7 +157,7 @@
                             android:id="@+id/imageButtonNisaki"
                             android:layout_width="match_parent"
                             android:layout_height="300dp"
-                            android:onClick="openMainActivityParkUnpark"
+
                             app:srcCompat="@drawable/nisaki" />
 
                         <LinearLayout
@@ -225,7 +225,7 @@
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="20dp"
-                    android:onClick="openMainActivityParkUnpark"
+
                     app:cardBackgroundColor="#92FFFFFF"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="4dp">
@@ -240,7 +240,7 @@
                             android:id="@+id/imageButtonDoxa"
                             android:layout_width="match_parent"
                             android:layout_height="300dp"
-                            android:onClick="openMainActivityParkUnpark"
+
                             app:srcCompat="@drawable/doxa" />
 
                         <LinearLayout
@@ -354,5 +354,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="35dp"
-        app:srcCompat="@drawable/baseline_local_parking_24"/>
+        app:srcCompat="@drawable/baseline_push_pin_24_red"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,6 +25,7 @@ public class MainActivityParkUnpark extends AppCompatActivity {
         setContentView(R.layout.activity_main_park_unpark);
         Variables app = (Variables) getApplicationContext();
 
+
         park = findViewById(R.id.btnPark);
         unpark = findViewById(R.id.btnUnpark);
 
@@ -33,13 +34,49 @@ public class MainActivityParkUnpark extends AppCompatActivity {
             @Override
             public void onClick(View view) {
              SimpleDateFormat nowTime = new SimpleDateFormat("HH:mm:ss ", Locale.getDefault());
+                SimpleDateFormat nowDate = new SimpleDateFormat("yyyy-MM-dd ", Locale.getDefault());
+                Date date = new Date();
+                Date date2 = new Date();
+                String formattedTime = nowTime.format(date);
+                String formattedDate = nowDate.format(date2);
+
+                app.setCurrentTime(formattedTime);
+                String printTime = app.getCurrentTime();
+
+                app.setCurrentDate(formattedDate);
+                String printDate = app.getCurrentDate();
+
+                Intent intent = getIntent();
+                String currentParking = intent.getStringExtra("parkingId");
+                app.setCurrentParking(currentParking);
+
+
+
+
+
+                Toast.makeText(MainActivityParkUnpark.this, "Park Meter starting now",Toast.LENGTH_LONG).show();
+                switch (currentParking){
+                    case "Νησάκι":
+                        app.setParkingSpotsNis(app.getParkingSpotsNis() + 1);
+                        break;
+
+                    case "Λαλακιά":
+                        app.setParkingSpotsLal(app.getParkingSpotsLal() + 1);
+                        break;
+
+                    case "Δόξα":
+                        app.setParkingSpotsDox(app.getParkingSpotsDox() + 1);
+                        break;
+                }
+
+
 
             //    Toast.makeText(MainActivityParkUnpark.this, "Park Meter starting now",Toast.LENGTH_LONG).show();
-               // app.setJustParkedTimeDate(nowTime);
+//                app.setJustParkedTimeDate(nowTime);
 
             }
         });
-//        sygnwmh gia opoion to diavasei afto
+//
 
     }
 

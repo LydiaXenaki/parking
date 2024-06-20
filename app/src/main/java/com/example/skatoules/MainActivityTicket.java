@@ -2,6 +2,7 @@ package com.example.skatoules;
 
 import static com.example.skatoules.R.id.end_date;
 import static com.example.skatoules.R.id.end_time;
+import static com.example.skatoules.R.id.parking;
 import static com.example.skatoules.R.id.start_date;
 import static com.example.skatoules.R.id.start_time;
 
@@ -29,6 +30,7 @@ public class MainActivityTicket extends AppCompatActivity {
         TextView ending_date = findViewById(end_date);
         TextView starting_time = findViewById(start_time);
         TextView ending_time = findViewById(end_time);
+        TextView parkingName = findViewById(R.id.parking);
 
         // Format the current date and time
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd ", Locale.getDefault());
@@ -39,11 +41,13 @@ public class MainActivityTicket extends AppCompatActivity {
 
         String printTime = app.getCurrentTime();
         String printDate = app.getCurrentDate();
+        String parking_name = app.getCurrentParking();
+
 
 
         
 
-
+        parkingName.setText("Parking: " + parking_name);
         // Display the formatted date and time
         starting_date.setText("Starting Date: " + printDate);
         ending_date.setText("End Date: " + formattedDate);
