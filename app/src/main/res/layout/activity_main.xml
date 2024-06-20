@@ -353,5 +353,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/ParkingAreaslinearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="35dp"
-        app:srcCompat="@drawable/baseline_push_pin_24_red"/>
+        app:srcCompat="@drawable/baseline_car_crash_24"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
