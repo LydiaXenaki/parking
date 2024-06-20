@@ -908,6 +908,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
                 android:background="#00FFFFFF"
+                android:onClick="openMapActivity"
                 app:srcCompat="@drawable/location" />
 
             <ImageButton

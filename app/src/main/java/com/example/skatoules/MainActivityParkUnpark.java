@@ -132,6 +132,7 @@ public class MainActivityParkUnpark extends AppCompatActivity {
 
     }
 
+
     public void openHistoryActivity(View view) {
         startActivity(new Intent(this,HistoryActivity.class));
     }

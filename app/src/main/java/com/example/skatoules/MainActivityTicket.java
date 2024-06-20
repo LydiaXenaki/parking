@@ -67,7 +67,9 @@ public class MainActivityTicket extends AppCompatActivity {
 
     }
 
-
+    public void openMapActivity(View view) {
+        startActivity(new Intent(this, MapActivity.class));
+    }
 
     public void openHistoryActivity(View view) {
         startActivity(new Intent(this,HistoryActivity.class));

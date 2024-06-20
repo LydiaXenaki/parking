@@ -14,6 +14,10 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_history);
     }
 
+    public void openMapActivity(View view) {
+        startActivity(new Intent(this, MapActivity.class));
+    }
+
     public void openMainActivityParkUnpark(View view) {
         startActivity(new Intent(this,MainActivityParkUnpark.class));
     }
