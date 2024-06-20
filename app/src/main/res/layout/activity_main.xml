@@ -157,7 +157,6 @@
                             android:id="@+id/imageButtonNisaki"
                             android:layout_width="match_parent"
                             android:layout_height="300dp"
-
                             app:srcCompat="@drawable/nisaki" />
 
                         <LinearLayout
@@ -326,6 +325,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
                 android:background="#00FFFFFF"
+                android:onClick="openMapActivity"
                 app:srcCompat="@drawable/location" />
 
             <ImageButton
@@ -353,5 +353,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/ParkingAreaslinearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="35dp"
-        app:srcCompat="@drawable/baseline_push_pin_24_red"/>
+        app:srcCompat="@drawable/baseline_car_crash_24"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
