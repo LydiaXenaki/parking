@@ -347,11 +347,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="70dp"
-
         android:outlineSpotShadowColor="@color/black"
         app:backgroundTint="#6685F6"
         app:fabSize="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/ParkingAreaslinearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:maxImageSize="35dp"
         app:srcCompat="@drawable/baseline_push_pin_24_red"/>
