@@ -130,6 +130,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, HistoryActivity.class));
     }
 
+    public void openMapActivity(View view) {
+        startActivity(new Intent(this, MapActivity.class));
+    }
+
     private void handleButtonClick(int viewId) {
         Intent clickParking = new Intent(this, MainActivityParkUnpark.class);
         if (viewId == R.id.imageButtonNisaki) {
