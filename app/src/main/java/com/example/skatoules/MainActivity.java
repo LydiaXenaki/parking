@@ -49,11 +49,18 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Objects.equals(app.getCurrentParking(), "Λαλακιά") || app.getCurrentParking() == ""){
-                    handleButtonClick(view.getId());
+
+                if (app.getParkingSpotsLal() < app.getParkingSpotsLalmax()){
+
+                    if (Objects.equals(app.getCurrentParking(), "Λαλακιά") || app.getCurrentParking() == ""){
+                        handleButtonClick(view.getId());
+                    }else{
+                        Toast.makeText(MainActivity.this, "Youre allready parked somewhere",Toast.LENGTH_LONG).show();
+                    }
                 }else{
-                    Toast.makeText(MainActivity.this, "Youre allready parked somewhere",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Parking Full!",Toast.LENGTH_LONG).show();
                 }
+
 
             }
         });
@@ -61,22 +68,32 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Objects.equals(app.getCurrentParking(), "Νησάκι") || app.getCurrentParking() == ""){
-                    handleButtonClick(view.getId());
-                }else{
-                    Toast.makeText(MainActivity.this, "Youre allready parked somewhere",Toast.LENGTH_LONG).show();
+                if (app.getParkingSpotsNis() < app.getParkingSpotsNismax()){
+                    if (Objects.equals(app.getCurrentParking(), "Νησάκι") || app.getCurrentParking() == ""){
+                        handleButtonClick(view.getId());
+                    }else{
+                        Toast.makeText(MainActivity.this, "Youre allready parked somewhere",Toast.LENGTH_LONG).show();
+                    }
+                }else {
+                    Toast.makeText(MainActivity.this, "Parking Full!",Toast.LENGTH_LONG).show();
                 }
+
             }
         });
 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Objects.equals(app.getCurrentParking(), "Δόξα") || app.getCurrentParking() == ""){
-                    handleButtonClick(view.getId());
+                if (app.getParkingSpotsDox() < app.getParkingSpotsDoxmax()){
+                    if (Objects.equals(app.getCurrentParking(), "Δόξα") || app.getCurrentParking() == ""){
+                        handleButtonClick(view.getId());
+                    }else{
+                        Toast.makeText(MainActivity.this, "Youre allready parked somewhere",Toast.LENGTH_LONG).show();
+                    }
                 }else{
-                    Toast.makeText(MainActivity.this, "Youre allready parked somewhere",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Parking Full!",Toast.LENGTH_LONG).show();
                 }
+
             }
         });
 
