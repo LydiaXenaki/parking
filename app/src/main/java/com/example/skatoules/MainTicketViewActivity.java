@@ -6,8 +6,10 @@ import static com.example.skatoules.R.id.end_time;
 import static com.example.skatoules.R.id.start_date;
 import static com.example.skatoules.R.id.start_time;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,4 +44,19 @@ public class MainTicketViewActivity extends AppCompatActivity {
             totalFee.setText("Total Fee: " + ticket.getTotalFee());
         }
     }
+
+    public void openHistoryActivity(View view) {
+        startActivity(new Intent(this, HistoryActivity.class));
+    }
+
+
+    public void openMapActivity(View view) {
+        startActivity(new Intent( this , MapActivity.class));
+    }
+
+
+    public void openMainActivity(View view) {
+        startActivity(new Intent(this, MainActivity.class));
+    }
+
 }
